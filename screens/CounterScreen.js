@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Header, Content, Fab, View, Text,Icon, Title, Left, Right, Body, Button } from 'native-base';
-
+import {TouchableNativeFeedback} from 'react-native'
 import { WebBrowser,Font } from 'expo';
 
 export default class CounterScreen extends React.Component {
@@ -43,40 +43,46 @@ export default class CounterScreen extends React.Component {
             </Button>
           </Right>
         </Header>
-        <View 
+        {/*<Content
           style={{
             flex:1,
             alignItems: "center" ,
             justifyContent: 'center'
           }}
         >
-          <Text>
-            { this.state.counter }
-          </Text>
-          <Fab
 
+
+
+
+
+        
+        </Content>*/}
+
+        <Text>
+            { this.state.counter }
+        </Text>
+        <Fab
+
+            onPress={this.addHandler}
             style={{ backgroundColor: '#5067FF', borderRadius:50                                                                                                                                                                                                                                                        }}
             position="bottomRight"
-            onPress={this.addHandler}>
+        >
 
-            <Icon name="add"/>
+          <Icon name="add"/>
 
 
-          </Fab>
+        </Fab>
 
-          <Fab
-      
+        <Fab
+
             style={{ backgroundColor: '#5067FF' }}
             position="bottomLeft"
             onPress={this.resetHandler}>
-            
-            <Icon name="refresh" />
 
-            
-          </Fab>
+          <Icon name="refresh" />
 
-        
-        </View>
+
+        </Fab>
        
       </Container>
     );
