@@ -8,38 +8,28 @@ export default class CounterScreen extends React.Component {
   };
 
 
-  state = {counter: 0}
+  state = {counter: 0};
 
   addHandler = () =>  {
     this.setState((state) => ({
       counter: state.counter + 1
     }))
-  }
+  };
 
   resetHandler = () =>  {
     this.setState((state) => ({
       counter: 0
     }))
-  }
+  };
   render() {
     return (
      
 
       <Container>
         <Header>
-          <Left>
-            <Button transparent>
-              <Icon name='arrow-back' />
-            </Button>
-          </Left>
           <Body>
             <Title>Awesome Counter</Title>
           </Body>
-          <Right>
-            <Button transparent ripple>
-              <Icon name='menu' />
-            </Button>
-          </Right>
         </Header>
 
         <View
